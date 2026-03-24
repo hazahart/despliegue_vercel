@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     if (method === 'GET') {
         try {
             const { data, error } = await supabase
-                .from('budgets')
+                .from('profiles')
                 .select('*');
 
             if (error) {
