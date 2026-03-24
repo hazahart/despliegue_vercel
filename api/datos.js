@@ -14,7 +14,7 @@ export default async function handler(req, res) {
         try {
             const { data, error } = await supabase
                 .from('profiles')
-                .select('*');
+                .select('email, full_name, role, created_at, control_number, semester, info');
 
             if (error) {
                 return res.status(500).json({ error: error.message });
